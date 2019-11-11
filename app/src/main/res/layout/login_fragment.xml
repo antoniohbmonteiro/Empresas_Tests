@@ -16,7 +16,7 @@
         android:src="@drawable/logo_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/welcomeTxt"
@@ -27,7 +27,7 @@
         android:layout_marginEnd="110dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="BEM-VINDO AO EMPRESAS"
+        android:text="@string/login_welcome"
         android:textColor="@color/charcoal_grey"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -45,9 +45,9 @@
         android:fontFamily="sans-serif"
         android:gravity="center"
         android:lineSpacingExtra="3.5sp"
-        android:text="Lorem ipsum dolor sit amet, contetur adipiscing elit. Nunc accumsan."
+        android:text="@string/login_loren"
         android:textColor="@color/charcoal_grey"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeTxt" />
@@ -70,7 +70,7 @@
             android:inputType="textEmailAddress"
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="8dp"
-            android:hint="E-mail"
+            android:hint="@string/login_email_edt"
             android:textColorHint="@color/charcoal_grey" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="8dp"
-            android:hint="Senha" />
+            android:hint="@string/login_password_edt" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,7 +107,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/selector_button_enabled"
-        android:text="Entrar"
+        android:text="@string/login_enter_btn"
         android:textSize="15sp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
