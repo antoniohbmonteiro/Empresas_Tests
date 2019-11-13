@@ -1,10 +1,9 @@
 package br.com.empresas_tests
 
-import android.service.autofill.Validators.and
-import android.util.Patterns
 import androidx.core.util.PatternsCompat
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.com.empresas_tests.util.EditTextValidator
 
 class LoginViewModel : ViewModel() {
 
@@ -28,6 +27,10 @@ class LoginViewModel : ViewModel() {
         val loginReady =
             (emailValidLiveData.value ?: false) && (passwordValidLiveData.value ?: false)
 
+        enableLoginButton(loginReady)
+    }
+
+    private fun enableLoginButton(loginReady: Boolean) {
         loginButtonEnableLiveData.value = loginReady
     }
 
@@ -43,10 +46,6 @@ class LoginViewModel : ViewModel() {
         return isValid
     }
 
-    fun textIsBlank(text: String): Boolean{
-        return text.isBlank()
-    }
-
     private fun validPasswordEditText(passwordText: String): Boolean {
         var isValid = true
 
@@ -56,8 +55,12 @@ class LoginViewModel : ViewModel() {
         return isValid
     }
 
+    fun textIsBlank(text: String): Boolean {
+        return EditTextValidator.textIsBlank(text)
+    }
+
     fun validIsNotEmailPattern(emailText: String): Boolean {
-        return !PatternsCompat.EMAIL_ADDRESS.matcher(emailText).matches()
+        return !EditTextValidator.validEmailPattern(emailText)
     }
 
 }

@@ -23,11 +23,16 @@ class AppActivity : AppCompatActivity() {
     fun updateToolbar(toolbarConfiguration: ToolbarConfiguration) {
         supportActionBar?.let {
 
-            toolbarConfiguration.title?.let {title ->
+            toolbarConfiguration.title?.let { title ->
                 it.title = title
             }
 
             if (toolbarConfiguration.hide) it.hide() else it.show()
+
+            if (toolbarConfiguration.showIcon)
+                it.setLogo(R.drawable.title_logo_background)
+            else
+                it.setLogo(null)
         }
 
     }
