@@ -6,17 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.Observer
+import br.com.empresas_tests.util.ToolbarConfiguration
 import kotlinx.android.synthetic.main.login_fragment.*
 
 
 class LoginFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = LoginFragment()
-    }
 
     private lateinit var viewModel: LoginViewModel
 

@@ -1,4 +1,4 @@
-package br.com.empresas_tests
+package br.com.empresas_tests.util
 
 data class ToolbarConfiguration (
 

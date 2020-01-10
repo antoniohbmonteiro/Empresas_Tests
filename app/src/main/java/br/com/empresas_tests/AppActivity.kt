@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import br.com.empresas_tests.util.ToolbarConfiguration
 import kotlinx.android.synthetic.main.activity_app.*
 
 class AppActivity : AppCompatActivity() {
